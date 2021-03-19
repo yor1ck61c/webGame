@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="webGame">
+    <output-path>$PROJECT_DIR$/out/artifacts/webGame</output-path>
+    <root id="root">
+      <element id="library" level="project" name="lib (2)" />
+    </root>
+  </artifact>
+</component>
