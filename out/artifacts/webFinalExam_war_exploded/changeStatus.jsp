@@ -55,7 +55,7 @@
         document.getElementById("jumpToIndex").innerHTML= x+"秒后回到首页";  //每次设置的x的值都不一样了。
       }else{
         location.href='index.jsp';
-      }
+      }gi
     }
     setInterval(go,1000);
   </script>

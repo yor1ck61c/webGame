@@ -18,7 +18,7 @@ import java.util.Properties;
  *     2.释放资源
  *     3.获取连接池的方法
  * */
-public class druidUtils {
+public class DruidUtils {
     //    1.定义成员变量 DataSource
     private static DataSource dataSource;
 
@@ -26,7 +26,7 @@ public class druidUtils {
 //        1.加载配置文件
         Properties properties = new Properties();
         try {
-            properties.load(druidUtils.class.getClassLoader().getResourceAsStream("druid.properties"));
+            properties.load(DruidUtils.class.getClassLoader().getResourceAsStream("druid.properties"));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -71,7 +71,7 @@ public class druidUtils {
     }
 
     public static void close(Statement statement, Connection connection) {
-        druidUtils.close(null,statement,connection);
+        DruidUtils.close(null,statement,connection);
     }
     //    获取连接池
     public static DataSource getDataSource() {

@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Random;
 
-public class checkCode {
+public class CheckCode {
     private int w = 100;
     private int h = 30;
     private Random r = new Random();

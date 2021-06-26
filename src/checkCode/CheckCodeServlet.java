@@ -9,9 +9,9 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 @WebServlet("/checkCode.checkCodeServlet")
-public class checkCodeServlet extends HttpServlet {
+public class CheckCodeServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        checkCode checkCode = new checkCode();
+        CheckCode checkCode = new CheckCode();
         BufferedImage image = checkCode.getImage();
         request.getSession().setAttribute("checkCode", checkCode.getText());
         checkCode.output(image, response.getOutputStream());

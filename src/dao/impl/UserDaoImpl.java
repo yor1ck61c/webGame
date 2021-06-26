@@ -1,10 +1,9 @@
 package dao.impl;
 
 import dao.UserDao;
-import domain.Emp;
 import domain.Rank;
 import domain.User;
-import druidUtils.druidUtils;
+import druidUtils.DruidUtils;
 import org.junit.Test;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -13,7 +12,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import java.util.List;
 
 public class UserDaoImpl implements UserDao {
-    private JdbcTemplate template = new JdbcTemplate(druidUtils.getDataSource());
+    private JdbcTemplate template = new JdbcTemplate(DruidUtils.getDataSource());
     @Override
     public User findUserByUsername(String username) {
         String sql = "select * from user where username = ?";
